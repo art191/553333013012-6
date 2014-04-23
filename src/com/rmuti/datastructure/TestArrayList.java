@@ -1,34 +1,54 @@
 package com.rmuti.datastructure;
 
 public class TestArrayList {
+
 	public static void main(String[] args) {
-		ArrayList list = new ArrayList();
-		//--add data for Array list---///
-		list.add("test1");
-		list.add("test2");
-		list.add("test3");
-		list.add("test4");
-		//--Show data Array------//
-		System.out.println(list);
-		//--add "test5" to array[2]---//
-		list.add(2, "test5");
-		//--Show data Array------//
-		System.out.println(list);
-		//--add "test6" to array[First]---//
-		list.addFirst("test6");
-		//--Show data Array------//
-		System.out.println(list);
-		//--add "test7" to array[Last]---//;
-		list.addLast("test7");
-		//--Show data Array------//
-		System.out.println(list);
-		//--Remove array[4]is  "test4"
-		list.remove(4);
-		//--Show data Array------//
-		System.out.println(list);
-		
-		
 
+		ArrayList lst = new ArrayList();
+		lst.add("test1");
+		lst.add("test2");
+		lst.add("test3");
+		lst.add("test4");
+		lst.add("test5");
+
+		System.out.println(lst);
+
+		System.out.println("\n");
+
+		ArrayListStack stk = new ArrayListStack();
+
+		stk.push('A');
+		stk.push('B');
+		stk.push('C');
+		stk.push('D');
+		stk.push('E');
+
+		
+		stk.Show_Stack();
+		System.out.println("pop = " + stk.pop());
+		stk.Show_Stack();
+
+ System.out.println("");
+		ArrayListQueue q = new ArrayListQueue();
+
+		q.enQueue("A");
+		q.enQueue("B");
+		q.enQueue("C");
+		q.enQueue("D");
+		q.enQueue("F");
+		q.enQueue("G");
+		q.Show_Queue();
+		System.out.println("De Queue = " + q.deQueue());
+		q.Show_Queue();
+
+		System.out.println("De Queue = " + q.deQueue());
+		q.Show_Queue();
+
+		System.out.println("De Queue = " + q.deQueue());
+		q.Show_Queue();
+
+		System.out.println("First Data = " + q.peek());
+
+		System.out.println("Data in Queue = " + q.getSize());
 	}
-
 }
